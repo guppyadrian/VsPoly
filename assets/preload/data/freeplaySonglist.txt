@@ -1,0 +1,4 @@
+Tutorial:gf:1
+Bitwit:poly:1
+Polygonal:poly:1
+Hexadec:poly:1
