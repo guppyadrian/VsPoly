@@ -18,6 +18,9 @@ poly in--funky friday wyd
 funky friday--add poly
 add poly to--funky friday
 add poly to--funky friday
+poly in funky friday--will grovel
+funky friday--do the poly add
+if add poly in funky friday--cool
 poly funny--poly funny
 flipY equals true--only cool will understand
 poly robot--uprising
@@ -107,3 +110,12 @@ im a creeper--minecrafts grim reaper
 me me--big boy
 bling bling--boy
 pp reveal--when
+bf--wuz here
+among--sus
+obangus--obungus
+sheesh--sheeesh
+mr fry--wants more playstation
+chungo--biggest inspiration
+yummy yummy yummy--good for your tummy
+its mr brocolli--back at it again
+glow squids--bruh

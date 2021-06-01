@@ -15,7 +15,7 @@
 #endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_53a4702d20f27689_307_new,"__ASSET__assets_fonts_comicsans_ttf","new",0xa8b8f2e0,"__ASSET__assets_fonts_comicsans_ttf.new","lime/_internal/macros/AssetsMacro.hx",307,0xc651f030)
-HX_LOCAL_STACK_FRAME(_hx_pos_9afe340f2e21805e_389_boot,"__ASSET__assets_fonts_comicsans_ttf","boot",0xf13491b2,"__ASSET__assets_fonts_comicsans_ttf.boot","ManifestResources.hx",389,0xf77aa668)
+HX_LOCAL_STACK_FRAME(_hx_pos_9afe340f2e21805e_415_boot,"__ASSET__assets_fonts_comicsans_ttf","boot",0xf13491b2,"__ASSET__assets_fonts_comicsans_ttf.boot","ManifestResources.hx",415,0xf77aa668)
 
 void __ASSET__assets_fonts_comicsans_ttf_obj::__construct(){
             	HX_STACKFRAME(&_hx_pos_53a4702d20f27689_307_new)
@@ -136,8 +136,8 @@ void __ASSET__assets_fonts_comicsans_ttf_obj::__register()
 void __ASSET__assets_fonts_comicsans_ttf_obj::__boot()
 {
 {
-            	HX_STACKFRAME(&_hx_pos_9afe340f2e21805e_389_boot)
-HXDLIN( 389)		resourceName = HX_("LIME_font___ASSET__assets_fonts_comicsans_ttf",e8,ae,9a,5f);
+            	HX_STACKFRAME(&_hx_pos_9afe340f2e21805e_415_boot)
+HXDLIN( 415)		resourceName = HX_("LIME_font___ASSET__assets_fonts_comicsans_ttf",e8,ae,9a,5f);
             	}
 }
 

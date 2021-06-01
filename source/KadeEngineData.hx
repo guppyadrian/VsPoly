@@ -59,6 +59,8 @@ class KadeEngineData
 
 		if (FlxG.save.data.watermark == null)
 			FlxG.save.data.watermark = true;
+		if (FlxG.save.data.flushedUnlocked == null)
+			FlxG.save.data.flushedUnlocked == false;
 
 		Conductor.recalculateTimings();
 

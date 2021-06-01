@@ -117,6 +117,7 @@ null
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_bitwit_bitwit_easy_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_bitwit_bitwit_hard_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_bitwit_bitwit_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_bitwit_bitwitdialogue_alt_txt extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_bitwit_bitwitdialogue_txt extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_characterlist_txt extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_controls_txt extends null { }
@@ -126,6 +127,7 @@ null
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_hexadec_hexadec_easy_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_hexadec_hexadec_hard_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_hexadec_hexadec_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_hexadec_hexadecdialogue_alt_txt extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_hexadec_hexadecdialogue_txt extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_introtext_txt extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_main_view_xml extends null { }
@@ -134,8 +136,10 @@ null
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_polygonal_polygonal_easy_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_polygonal_polygonal_hard_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_polygonal_polygonal_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_polygonal_polygonaldialogue_alt_txt extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_polygonal_polygonaldialogue_txt extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_specialthanks_txt extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_tutorial_tutorial_alt_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_tutorial_tutorial_easy_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_tutorial_tutorial_hard_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_tutorial_tutorial_json extends null { }
@@ -215,6 +219,7 @@ null
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_portraits_gfportrait_xml extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_ready_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_restart_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_roblox_hacker_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_screencaptierimage_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_set_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_shit_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -284,6 +289,23 @@ null
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_weeb_weebtrees_txt extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_weeb_weebtreesback_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_week54prototype_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_week69_22_french_long_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_week69_boyfrien_getawau_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_week69_drumsy_run_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_week69_eye_for_an_eye_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_week69_grab_hands_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_week69_hitman3_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_week69_hotelwin4_mp4 extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_week69_look_left_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_week69_obimbus_pig_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_week69_poly_2_0_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_week69_retrobopbruh_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_week69_saysanime_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_week69_spelling_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_week69_statue_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_week69_uh_oh_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_week69_winning_mp4 extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_week69_yaya_jpg extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_zzzzzzzz_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_music_breakfast_ogg extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_music_gameover_ogg extends null { }
@@ -324,7 +346,10 @@ null
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_sounds_thunder_2_ogg extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_sounds_train_passes_ogg extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_tutorial_tutorial_stuff_here_txt extends null { }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_week1_images_poly_bg_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_week1_images_poly_bgday_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_week1_images_poly_bglights_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_week1_images_poly_bgmorning_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_week1_images_poly_bgnight_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_week1_images_poly_polydialogue_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_week1_images_poly_polydialogue_xml extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_week1_images_poly_poly_assets_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -339,6 +364,7 @@ null
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_fonts_comicsans_ttf extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_fonts_fonts_go_here_txt extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_fonts_fridayfunkin_otf extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_fonts_minor_spelling_mp4 extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_fonts_pixel_otf extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_fonts_vcr_ttf extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__flixel_sounds_beep_ogg extends null { }
@@ -389,6 +415,7 @@ null
 @:keep @:font("assets/fonts/comicsans.ttf") @:noCompletion #if display private #end class __ASSET__assets_fonts_comicsans_ttf extends lime.text.Font {}
 @:keep @:file("assets/fonts/fonts-go-here.txt") @:noCompletion #if display private #end class __ASSET__assets_fonts_fonts_go_here_txt extends haxe.io.Bytes {}
 @:keep @:font("assets/fonts/fridayfunkin.otf") @:noCompletion #if display private #end class __ASSET__assets_fonts_fridayfunkin_otf extends lime.text.Font {}
+@:keep @:file("assets/fonts/minor spelling.mp4") @:noCompletion #if display private #end class __ASSET__assets_fonts_minor_spelling_mp4 extends haxe.io.Bytes {}
 @:keep @:font("assets/fonts/pixel.otf") @:noCompletion #if display private #end class __ASSET__assets_fonts_pixel_otf extends lime.text.Font {}
 @:keep @:font("assets/fonts/vcr.ttf") @:noCompletion #if display private #end class __ASSET__assets_fonts_vcr_ttf extends lime.text.Font {}
 @:keep @:file("C:/HaxeToolkit/haxe/lib/flixel/4,9,0/assets/sounds/beep.ogg") @:noCompletion #if display private #end class __ASSET__flixel_sounds_beep_ogg extends haxe.io.Bytes {}

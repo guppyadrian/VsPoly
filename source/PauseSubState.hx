@@ -29,7 +29,7 @@ class PauseSubState extends MusicBeatSubstate
 	public function new(x:Float, y:Float)
 	{
 		super();
-		if (PlayState.curStage == 'polyStage') {
+		if (PlayState.curStage == 'polyNight' || PlayState.curStage == 'polyMorning' || PlayState.curStage == 'polyDay') {
 			pauseMusic = new FlxSound().loadEmbedded(Paths.music('lofly'), true, true);
 		} else {
 			pauseMusic = new FlxSound().loadEmbedded(Paths.music('breakfast'), true, true);
@@ -93,7 +93,7 @@ class PauseSubState extends MusicBeatSubstate
 
 	override function update(elapsed:Float)
 	{
-		if (PlayState.curStage == 'polyStage') {
+		if (PlayState.curStage == 'polyNight' || PlayState.curStage == 'polyMorning' || PlayState.curStage == 'polyDay') {
 			if (pauseMusic.volume < 0.80)
 				pauseMusic.volume += 0.02 * elapsed;
 		} else {

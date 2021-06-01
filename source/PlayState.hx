@@ -161,6 +161,7 @@ class PlayState extends MusicBeatState
 	var trainSound:FlxSound;
 
 	var limo:FlxSprite;
+	var bgLight:FlxSprite;
 	var grpLimoDancers:FlxTypedGroup<BackgroundDancer>;
 	var fastCar:FlxSprite;
 	var songName:FlxText;
@@ -193,6 +194,7 @@ class PlayState extends MusicBeatState
 
 	public static var timeCurrently:Float = 0;
 	public static var timeCurrentlyR:Float = 0;
+
 	
 	// Will fire once to prevent debug spam messages and broken animations
 	private var triggeredAlready:Bool = false;
@@ -516,13 +518,20 @@ class PlayState extends MusicBeatState
 			case 'thorns':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('thorns/thornsDialogue'));
 			case 'bitwit':
+				if (storyDifficulty == 3)
+				dialogue = CoolUtil.coolTextFile(Paths.txt('bitwit/bitwitDialogue-alt'));
+				else 
 				dialogue = CoolUtil.coolTextFile(Paths.txt('bitwit/bitwitDialogue'));
 			case 'polygonal':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('polygonal/polygonalDialogue'));
+				if (storyDifficulty == 3)
+					dialogue = CoolUtil.coolTextFile(Paths.txt('polygonal/polygonalDialogue-alt'));
+					else 
+					dialogue = CoolUtil.coolTextFile(Paths.txt('polygonal/polygonalDialogue'));
 			case 'hexadec':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('hexadec/hexadecDialogue'));
-			case 'subaru':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('subaru/subaruDialogue'));
+				if (storyDifficulty == 3)
+					dialogue = CoolUtil.coolTextFile(Paths.txt('hexadec/hexadecDialogue-alt'));
+					else 
+					dialogue = CoolUtil.coolTextFile(Paths.txt('hexadec/hexadecDialogue'));
 		}
 
 		switch(SONG.song.toLowerCase())
@@ -777,20 +786,58 @@ class PlayState extends MusicBeatState
 					add(bgGirls);
 			}
 
-			case 'bitwit' | 'polygonal' | 'hexadec' | 'subaru':
+			case 'bitwit':
 			{
-				curStage = 'polyStage';
+				curStage = 'polyNight';
 				defaultCamZoom = 0.8;
 
 				var bg:FlxSprite = new FlxSprite(-250, -100);
-				bg.loadGraphic(Paths.image("poly/bg"));
+				bgLight = new FlxSprite(-250, 0);
+				bg.loadGraphic(Paths.image("poly/bgnight"));
+				bgLight.loadGraphic(Paths.image("poly/bglights"));
+				add(bg);
+				//add(bgLight);
+				bg.active = false;
+				bgLight.active = false;
+				bg.updateHitbox();
+				bgLight.updateHitbox();
+				bg.antialiasing = true;
+				bgLight.antialiasing = true;
+				bg.scrollFactor.set(0.9, 0.9);
+				bgLight.scrollFactor.set(0.95, 0.95);
+				bg.scale.set(1.75, 1.75);
+				bgLight.scale.set(1.25, 1.25);
+
+			}
+
+			case 'polygonal':
+			{
+				curStage = 'polyMorning';
+				defaultCamZoom = 0.8;
+
+				var bg:FlxSprite = new FlxSprite(-250, -100);
+				bg.loadGraphic(Paths.image("poly/bgmorning"));
 				add(bg);
 				bg.active = false;
 				bg.updateHitbox();
 				bg.antialiasing = true;
 				bg.scrollFactor.set(0.9, 0.9);
 				bg.scale.set(1.75, 1.75);
+			}
 
+			case 'hexadec':
+			{
+				curStage = 'polyDay';
+				defaultCamZoom = 0.8;
+
+				var bg:FlxSprite = new FlxSprite(-250, -100);
+				bg.loadGraphic(Paths.image("poly/bgday"));
+				add(bg);
+				bg.active = false;
+				bg.updateHitbox();
+				bg.antialiasing = true;
+				bg.scrollFactor.set(0.9, 0.9);
+				bg.scale.set(1.75, 1.75);
 			}
 
 			case 'thorns':
@@ -900,10 +947,6 @@ class PlayState extends MusicBeatState
 		dad = new Character(100, 100, SONG.player2);
 
 		var camPos:FlxPoint = new FlxPoint(dad.getGraphicMidpoint().x, dad.getGraphicMidpoint().y);
-		if (SONG.song == 'bitwit' || SONG.song == 'polygonal' || SONG.song == 'hexadec' || SONG.song == 'subaru') {
-			camPos.y -= 250;
-			camPos.x -= 100;
-		}
 
 		switch (SONG.player2)
 		{
@@ -942,8 +985,10 @@ class PlayState extends MusicBeatState
 				dad.y += 100;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'poly':
-				dad.x -= 500;
+				dad.x -= 575;
 				dad.y -= 575;
+				camPos.y -= 400;
+				camPos.x -= 100;
 
 		}
 
@@ -985,8 +1030,8 @@ class PlayState extends MusicBeatState
 				boyfriend.y += 220;
 				gf.x += 180;
 				gf.y += 300;
-			case 'polyStage':
-				boyfriend.x += 150;
+			case 'polyNight' | 'polyMorning' | 'polyDay':
+				boyfriend.x += 175;
 		}
 
 		add(gf);
@@ -997,6 +1042,9 @@ class PlayState extends MusicBeatState
 
 		add(dad);
 		add(boyfriend);
+
+		if (curStage == 'polyNight')
+			add(bgLight);
 
 		var doof:DialogueBox = new DialogueBox(false, dialogue);
 		// doof.x += 70;
@@ -1181,7 +1229,7 @@ class PlayState extends MusicBeatState
 					schoolIntro(doof);
 				case 'thorns':
 					schoolIntro(doof);
-				case 'bitwit' | 'polygonal' | 'hexadec' | 'subaru':
+				case 'bitwit' | 'polygonal' | 'hexadec':
 					polyIntro(doof);
 				default:
 					startCountdown();
@@ -2073,7 +2121,8 @@ class PlayState extends MusicBeatState
 			accuracy >= 70, // B
 			accuracy >= 60, // C
 			accuracy >= 40, // D
-			accuracy < 40 //BRUH
+			accuracy >= 25, //BRUH
+			accuracy < 25 //Jonah
 		];
 
 		for(i in 0...wifeConditions.length)
@@ -2117,6 +2166,8 @@ class PlayState extends MusicBeatState
 						ranking += " D";
 					case 16:
 						ranking += " Bruh";
+					case 17: 
+						ranking += " Jonah Rank";
 				}
 				break;
 			}
@@ -2465,7 +2516,7 @@ class PlayState extends MusicBeatState
 					case 'poly':
 						//y++ goes down???
 						camFollow.y = dad.getMidpoint().y + 125; //needs to be + 100 probably
-						camFollow.x = dad.getMidpoint().x + 100;
+						camFollow.x = dad.getMidpoint().x + 160;
 						//trace('hey stuff is here adrian rember me pls');
 				}
 
@@ -2494,8 +2545,8 @@ class PlayState extends MusicBeatState
 					case 'schoolEvil':
 						camFollow.x = boyfriend.getMidpoint().x - 200;
 						camFollow.y = boyfriend.getMidpoint().y - 200;
-					case 'polyStage':
-						camFollow.x = boyfriend.getMidpoint().x - 200;
+					case 'polyNight' | 'polyMorning' | 'polyDay':
+						camFollow.x = boyfriend.getMidpoint().x - 300;
 				}
 
 				if (SONG.song.toLowerCase() == 'tutorial')
@@ -2753,12 +2804,16 @@ class PlayState extends MusicBeatState
 		{
 			if (isStoryMode)
 			{
+
 				campaignScore += Math.round(songScore);
 
 				storyPlaylist.remove(storyPlaylist[0]);
 
 				if (storyPlaylist.length <= 0)
 				{
+					if(storyDifficulty > 1 && storyWeek == 1)
+						FlxG.save.data.flushedUnlocked = true;
+					trace(FlxG.save.data.flushedUnlocked);
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
 
 					transIn = FlxTransitionableState.defaultTransIn;

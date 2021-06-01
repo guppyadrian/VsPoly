@@ -6,7 +6,7 @@
 #include <hxcpp.h>
 #endif
 
-HX_DECLARE_STACK_FRAME(_hx_pos_66f21fcacf595f6d_297_new)
+HX_DECLARE_STACK_FRAME(_hx_pos_66f21fcacf595f6d_301_new)
 HX_DECLARE_CLASS0(SongMetadata)
 
 
@@ -37,13 +37,13 @@ class HXCPP_CLASS_ATTRIBUTES SongMetadata_obj : public ::hx::Object
 			SongMetadata_obj *__this = (SongMetadata_obj*)(::hx::Ctx::alloc(_hx_ctx, sizeof(SongMetadata_obj), true, "SongMetadata"));
 			*(void **)__this = SongMetadata_obj::_hx_vtable;
 {
-            	HX_STACKFRAME(&_hx_pos_66f21fcacf595f6d_297_new)
-HXLINE( 301)		( ( ::SongMetadata)(__this) )->songCharacter = HX_("",00,00,00,00);
-HXLINE( 300)		( ( ::SongMetadata)(__this) )->week = 0;
-HXLINE( 299)		( ( ::SongMetadata)(__this) )->songName = HX_("",00,00,00,00);
-HXLINE( 305)		( ( ::SongMetadata)(__this) )->songName = song;
-HXLINE( 306)		( ( ::SongMetadata)(__this) )->week = week;
-HXLINE( 307)		( ( ::SongMetadata)(__this) )->songCharacter = songCharacter;
+            	HX_STACKFRAME(&_hx_pos_66f21fcacf595f6d_301_new)
+HXLINE( 305)		( ( ::SongMetadata)(__this) )->songCharacter = HX_("",00,00,00,00);
+HXLINE( 304)		( ( ::SongMetadata)(__this) )->week = 0;
+HXLINE( 303)		( ( ::SongMetadata)(__this) )->songName = HX_("",00,00,00,00);
+HXLINE( 309)		( ( ::SongMetadata)(__this) )->songName = song;
+HXLINE( 310)		( ( ::SongMetadata)(__this) )->week = week;
+HXLINE( 311)		( ( ::SongMetadata)(__this) )->songCharacter = songCharacter;
             	}
 		
 			return __this;

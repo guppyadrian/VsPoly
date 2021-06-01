@@ -222,6 +222,25 @@ HXLINE(  56)		this->add(this->bgFade);
 HXLINE(  58)		 ::flixel::util::FlxTimer_obj::__alloc( HX_CTX ,null())->start(((Float)0.83), ::Dynamic(new _hx_Closure_0(_gthis)),5);
 HXLINE(  67)		bool hasDialog = false;
 HXLINE(  69)		::String _hx_switch_1 = ( (::String)(::PlayState_obj::SONG->__Field(HX_("song",d5,23,58,4c),::hx::paccDynamic)) ).toLowerCase();
+            		if (  (_hx_switch_1==HX_("bitwit",75,ad,13,f1)) ||  (_hx_switch_1==HX_("hexadec",5c,38,43,9f)) ||  (_hx_switch_1==HX_("polygonal",e5,69,b2,9a)) ){
+HXLINE(  78)			this->box =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,-20,400,null());
+HXLINE(  79)			hasDialog = true;
+HXLINE(  80)			 ::flixel::FlxSprite _hx_tmp = this->box;
+HXDLIN(  80)			::String library = null();
+HXDLIN(  80)			::String _hx_tmp1 = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("poly_bubble_talking",16,bc,d7,6d)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
+HXDLIN(  80)			_hx_tmp->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp1,::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("poly_bubble_talking",16,bc,d7,6d)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library)));
+HXLINE(  81)			this->box->animation->addByPrefix(HX_("normalOpen",91,41,38,70),HX_("speech bubble loud open",42,35,10,f0),5,false,null(),null());
+HXLINE(  82)			this->box->animation->addByPrefix(HX_("normal",27,72,69,30),HX_("AHH speech bubble",eb,de,b2,20),5,null(),null(),null());
+HXLINE(  83)			this->boxBf =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,-20,375,null());
+HXLINE(  84)			 ::flixel::FlxSprite _hx_tmp2 = this->boxBf;
+HXDLIN(  84)			::String library1 = null();
+HXDLIN(  84)			::String _hx_tmp3 = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("poly_bubble_talking",16,bc,d7,6d)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library1);
+HXDLIN(  84)			_hx_tmp2->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp3,::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("poly_bubble_talking",16,bc,d7,6d)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library1)));
+HXLINE(  85)			this->boxBf->animation->addByPrefix(HX_("normalOpen",91,41,38,70),HX_("Speech Bubble Normal Open",0d,59,3f,7c),5,false,null(),null());
+HXLINE(  86)			this->boxBf->animation->addByPrefix(HX_("normal",27,72,69,30),HX_("speech bubble normal",bd,d5,bc,a7),5,null(),null(),null());
+HXLINE(  87)			this->boxBf->set_visible(false);
+HXLINE(  77)			goto _hx_goto_1;
+            		}
             		if (  (_hx_switch_1==HX_("roses",04,6c,64,ed)) ){
 HXLINE(  89)			this->box =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,-20,45,null());
 HXLINE(  90)			hasDialog = true;
@@ -246,25 +265,6 @@ HXLINE(  75)			this->box->animation->addByPrefix(HX_("normalOpen",91,41,38,70),H
 HXLINE(  76)			this->box->animation->addByIndices(HX_("normal",27,72,69,30),HX_("Text Box Appear",bd,48,54,1a),::Array_obj< int >::fromData( _hx_array_data_ffc81fb3_8,1),HX_("",00,00,00,00),24,null(),null(),null());
 HXLINE(  71)			goto _hx_goto_1;
             		}
-            		if (  (_hx_switch_1==HX_("bitwit",75,ad,13,f1)) ||  (_hx_switch_1==HX_("hexadec",5c,38,43,9f)) ||  (_hx_switch_1==HX_("polygonal",e5,69,b2,9a)) ||  (_hx_switch_1==HX_("subaru",e4,44,fd,99)) ){
-HXLINE(  78)			this->box =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,-20,400,null());
-HXLINE(  79)			hasDialog = true;
-HXLINE(  80)			 ::flixel::FlxSprite _hx_tmp = this->box;
-HXDLIN(  80)			::String library = null();
-HXDLIN(  80)			::String _hx_tmp1 = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("poly_bubble_talking",16,bc,d7,6d)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
-HXDLIN(  80)			_hx_tmp->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp1,::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("poly_bubble_talking",16,bc,d7,6d)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library)));
-HXLINE(  81)			this->box->animation->addByPrefix(HX_("normalOpen",91,41,38,70),HX_("speech bubble loud open",42,35,10,f0),5,false,null(),null());
-HXLINE(  82)			this->box->animation->addByPrefix(HX_("normal",27,72,69,30),HX_("AHH speech bubble",eb,de,b2,20),5,null(),null(),null());
-HXLINE(  83)			this->boxBf =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,-20,375,null());
-HXLINE(  84)			 ::flixel::FlxSprite _hx_tmp2 = this->boxBf;
-HXDLIN(  84)			::String library1 = null();
-HXDLIN(  84)			::String _hx_tmp3 = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("poly_bubble_talking",16,bc,d7,6d)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library1);
-HXDLIN(  84)			_hx_tmp2->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp3,::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("poly_bubble_talking",16,bc,d7,6d)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library1)));
-HXLINE(  85)			this->boxBf->animation->addByPrefix(HX_("normalOpen",91,41,38,70),HX_("Speech Bubble Normal Open",0d,59,3f,7c),5,false,null(),null());
-HXLINE(  86)			this->boxBf->animation->addByPrefix(HX_("normal",27,72,69,30),HX_("speech bubble normal",bd,d5,bc,a7),5,null(),null(),null());
-HXLINE(  87)			this->boxBf->set_visible(false);
-HXLINE(  77)			goto _hx_goto_1;
-            		}
             		if (  (_hx_switch_1==HX_("thorns",9c,bf,c7,8c)) ){
 HXLINE(  98)			this->box =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,-20,45,null());
 HXLINE(  99)			hasDialog = true;
@@ -287,6 +287,19 @@ HXLINE( 111)		if (!(hasDialog)) {
 HXLINE( 112)			return;
             		}
 HXLINE( 113)		::String _hx_switch_2 = ( (::String)(::PlayState_obj::SONG->__Field(HX_("song",d5,23,58,4c),::hx::paccDynamic)) ).toLowerCase();
+            		if (  (_hx_switch_2==HX_("bitwit",75,ad,13,f1)) ||  (_hx_switch_2==HX_("hexadec",5c,38,43,9f)) ||  (_hx_switch_2==HX_("polygonal",e5,69,b2,9a)) ){
+HXLINE( 124)			this->portraitLeft =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,50,0,null());
+HXLINE( 125)			 ::flixel::FlxSprite _hx_tmp = this->portraitLeft;
+HXDLIN( 125)			::String library = null();
+HXDLIN( 125)			::String _hx_tmp1 = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("poly/polyDialogue",67,20,f4,4d)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
+HXDLIN( 125)			_hx_tmp->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp1,::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("poly/polyDialogue",67,20,f4,4d)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library)));
+HXLINE( 126)			this->portraitLeft->animation->addByPrefix(HX_("enter",18,6d,86,70),HX_("Senpai Portrait Enter",d7,e0,09,14),24,false,null(),null());
+HXLINE( 127)			this->portraitLeft->updateHitbox();
+HXLINE( 128)			this->portraitLeft->scrollFactor->set(null(),null());
+HXLINE( 129)			this->add(this->portraitLeft);
+HXLINE( 130)			this->portraitLeft->set_visible(false);
+HXLINE( 123)			goto _hx_goto_2;
+            		}
             		if (  (_hx_switch_2==HX_("roses",04,6c,64,ed)) ||  (_hx_switch_2==HX_("senpai",3c,df,8d,6b)) ||  (_hx_switch_2==HX_("thorns",9c,bf,c7,8c)) ){
 HXLINE( 115)			this->portraitLeft =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,-20,100,null());
 HXLINE( 116)			 ::flixel::FlxSprite _hx_tmp = this->portraitLeft;
@@ -302,19 +315,6 @@ HXLINE( 120)			this->portraitLeft->scrollFactor->set(null(),null());
 HXLINE( 121)			this->add(this->portraitLeft);
 HXLINE( 122)			this->portraitLeft->set_visible(false);
 HXLINE( 114)			goto _hx_goto_2;
-            		}
-            		if (  (_hx_switch_2==HX_("bitwit",75,ad,13,f1)) ||  (_hx_switch_2==HX_("hexadec",5c,38,43,9f)) ||  (_hx_switch_2==HX_("polygonal",e5,69,b2,9a)) ||  (_hx_switch_2==HX_("subaru",e4,44,fd,99)) ){
-HXLINE( 124)			this->portraitLeft =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,50,0,null());
-HXLINE( 125)			 ::flixel::FlxSprite _hx_tmp = this->portraitLeft;
-HXDLIN( 125)			::String library = null();
-HXDLIN( 125)			::String _hx_tmp1 = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("poly/polyDialogue",67,20,f4,4d)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
-HXDLIN( 125)			_hx_tmp->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp1,::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("poly/polyDialogue",67,20,f4,4d)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library)));
-HXLINE( 126)			this->portraitLeft->animation->addByPrefix(HX_("enter",18,6d,86,70),HX_("Senpai Portrait Enter",d7,e0,09,14),24,false,null(),null());
-HXLINE( 127)			this->portraitLeft->updateHitbox();
-HXLINE( 128)			this->portraitLeft->scrollFactor->set(null(),null());
-HXLINE( 129)			this->add(this->portraitLeft);
-HXLINE( 130)			this->portraitLeft->set_visible(false);
-HXLINE( 123)			goto _hx_goto_2;
             		}
             		_hx_goto_2:;
 HXLINE( 133)		::String _hx_switch_3 = ( (::String)(::PlayState_obj::SONG->__Field(HX_("song",d5,23,58,4c),::hx::paccDynamic)) ).toLowerCase();
@@ -383,11 +383,11 @@ HXLINE( 179)		this->add(this->handSelect);
 HXLINE( 182)		bool _hx_tmp5 = !(talkingRight);
 HXLINE( 188)		this->dropText =  ::flixel::text::FlxText_obj::__alloc( HX_CTX ,242,502,::Std_obj::_hx_int((( (Float)(::flixel::FlxG_obj::width) ) * ((Float)0.6))),HX_("",00,00,00,00),64,null());
 HXLINE( 189)		this->dropText->set_font(HX_("Friday Funkin Regular",6e,0b,b4,04));
-HXLINE( 190)		this->dropText->set_color(6710886);
+HXLINE( 190)		this->dropText->set_color(1836599);
 HXLINE( 191)		this->add(this->dropText);
 HXLINE( 193)		this->swagDialogue =  ::flixel::addons::text::FlxTypeText_obj::__alloc( HX_CTX ,( (Float)(240) ),( (Float)(500) ),::Std_obj::_hx_int((( (Float)(::flixel::FlxG_obj::width) ) * ((Float)0.6))),HX_("",00,00,00,00),64,null());
 HXLINE( 194)		this->swagDialogue->set_font(HX_("Friday Funkin Regular",6e,0b,b4,04));
-HXLINE( 195)		this->swagDialogue->set_color(0);
+HXLINE( 195)		this->swagDialogue->set_color(4591498);
 HXLINE( 196)		 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp6 = ::flixel::FlxG_obj::sound;
 HXDLIN( 196)		 ::flixel::_hx_system::FlxSound _hx_tmp7 = _hx_tmp6->load(::Paths_obj::sound(HX_("pixelText",53,7a,83,06),null()),((Float)0.6),null(),null(),null(),null(),null(),null(),null());
 HXDLIN( 196)		this->swagDialogue->sounds = ::Array_obj< ::Dynamic>::__new(1)->init(0,_hx_tmp7);

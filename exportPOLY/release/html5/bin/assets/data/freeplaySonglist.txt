@@ -1,3 +1,0 @@
-Tutorial:gf:1
-Bitwit:poly:7
-Polygonal:poly:7

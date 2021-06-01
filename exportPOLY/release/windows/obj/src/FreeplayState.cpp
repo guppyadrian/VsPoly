@@ -116,6 +116,9 @@
 #ifndef INCLUDED_flixel_text_FlxTextBorderStyle
 #include <flixel/text/FlxTextBorderStyle.h>
 #endif
+#ifndef INCLUDED_flixel_util_FlxSave
+#include <flixel/util/FlxSave.h>
+#endif
 #ifndef INCLUDED_flixel_util_IFlxDestroyable
 #include <flixel/util/IFlxDestroyable.h>
 #endif
@@ -152,8 +155,8 @@ static const ::String _hx_array_data_b3f26131_7[] = {
 	HX_("bf",c4,55,00,00),
 };
 HX_LOCAL_STACK_FRAME(_hx_pos_86166a84e8de7ace_165_update,"FreeplayState","update",0x9e1473a6,"FreeplayState.update","FreeplayState.hx",165,0x0d86f62d)
-HX_LOCAL_STACK_FRAME(_hx_pos_86166a84e8de7ace_219_changeDiff,"FreeplayState","changeDiff",0x302511b2,"FreeplayState.changeDiff","FreeplayState.hx",219,0x0d86f62d)
-HX_LOCAL_STACK_FRAME(_hx_pos_86166a84e8de7ace_245_changeSelection,"FreeplayState","changeSelection",0xbe8c8f7f,"FreeplayState.changeSelection","FreeplayState.hx",245,0x0d86f62d)
+HX_LOCAL_STACK_FRAME(_hx_pos_86166a84e8de7ace_221_changeDiff,"FreeplayState","changeDiff",0x302511b2,"FreeplayState.changeDiff","FreeplayState.hx",221,0x0d86f62d)
+HX_LOCAL_STACK_FRAME(_hx_pos_86166a84e8de7ace_249_changeSelection,"FreeplayState","changeSelection",0xbe8c8f7f,"FreeplayState.changeSelection","FreeplayState.hx",249,0x0d86f62d)
 
 void FreeplayState_obj::__construct( ::flixel::addons::transition::TransitionData TransIn, ::flixel::addons::transition::TransitionData TransOut){
             	HX_STACKFRAME(&_hx_pos_86166a84e8de7ace_20_new)
@@ -325,18 +328,27 @@ HXLINE( 200)				::flixel::FlxG_obj::game->_requestedState = nextState;
             			}
             		}
 HXLINE( 203)		if (accepted) {
-HXLINE( 205)			::String poop = this->songs->__get(this->curSelected).StaticCast<  ::SongMetadata >()->songName.toLowerCase();
-HXDLIN( 205)			::String poop1 = ::Highscore_obj::formatSong(poop,this->curDifficulty);
-HXLINE( 207)			::haxe::Log_obj::trace(poop1,::hx::SourceInfo(HX_("source/FreeplayState.hx",21,2d,b0,ce),207,HX_("FreeplayState",31,61,f2,b3),HX_("update",09,86,05,87)));
-HXLINE( 209)			::PlayState_obj::SONG = ::Song_obj::loadFromJson(poop1,this->songs->__get(this->curSelected).StaticCast<  ::SongMetadata >()->songName.toLowerCase());
-HXLINE( 210)			::PlayState_obj::isStoryMode = false;
-HXLINE( 211)			::PlayState_obj::storyDifficulty = this->curDifficulty;
-HXLINE( 212)			::PlayState_obj::storyWeek = this->songs->__get(this->curSelected).StaticCast<  ::SongMetadata >()->week;
-HXLINE( 213)			::haxe::Log_obj::trace((HX_("CUR WEEK",b4,9a,a0,36) + ::PlayState_obj::storyWeek),::hx::SourceInfo(HX_("source/FreeplayState.hx",21,2d,b0,ce),213,HX_("FreeplayState",31,61,f2,b3),HX_("update",09,86,05,87)));
-HXLINE( 214)			{
-HXLINE( 214)				 ::flixel::FlxState nextState = ::LoadingState_obj::getNextState(( ( ::flixel::FlxState)( ::PlayState_obj::__alloc( HX_CTX ,null(),null())) ),false);
-HXDLIN( 214)				if (::flixel::FlxG_obj::game->_state->switchTo(nextState)) {
-HXLINE( 214)					::flixel::FlxG_obj::game->_requestedState = nextState;
+HXLINE( 205)			bool _hx_tmp;
+HXDLIN( 205)			if (!(( (bool)(::flixel::FlxG_obj::save->data->__Field(HX_("flushedUnlocked",66,3f,22,bb),::hx::paccDynamic)) ))) {
+HXLINE( 205)				_hx_tmp = (this->curDifficulty != 3);
+            			}
+            			else {
+HXLINE( 205)				_hx_tmp = true;
+            			}
+HXDLIN( 205)			if (_hx_tmp) {
+HXLINE( 206)				::String poop = this->songs->__get(this->curSelected).StaticCast<  ::SongMetadata >()->songName.toLowerCase();
+HXDLIN( 206)				::String poop1 = ::Highscore_obj::formatSong(poop,this->curDifficulty);
+HXLINE( 208)				::haxe::Log_obj::trace(poop1,::hx::SourceInfo(HX_("source/FreeplayState.hx",21,2d,b0,ce),208,HX_("FreeplayState",31,61,f2,b3),HX_("update",09,86,05,87)));
+HXLINE( 210)				::PlayState_obj::SONG = ::Song_obj::loadFromJson(poop1,this->songs->__get(this->curSelected).StaticCast<  ::SongMetadata >()->songName.toLowerCase());
+HXLINE( 211)				::PlayState_obj::isStoryMode = false;
+HXLINE( 212)				::PlayState_obj::storyDifficulty = this->curDifficulty;
+HXLINE( 213)				::PlayState_obj::storyWeek = this->songs->__get(this->curSelected).StaticCast<  ::SongMetadata >()->week;
+HXLINE( 214)				::haxe::Log_obj::trace((HX_("CUR WEEK",b4,9a,a0,36) + ::PlayState_obj::storyWeek),::hx::SourceInfo(HX_("source/FreeplayState.hx",21,2d,b0,ce),214,HX_("FreeplayState",31,61,f2,b3),HX_("update",09,86,05,87)));
+HXLINE( 215)				{
+HXLINE( 215)					 ::flixel::FlxState nextState = ::LoadingState_obj::getNextState(( ( ::flixel::FlxState)( ::PlayState_obj::__alloc( HX_CTX ,null(),null())) ),false);
+HXDLIN( 215)					if (::flixel::FlxG_obj::game->_state->switchTo(nextState)) {
+HXLINE( 215)						::flixel::FlxG_obj::game->_requestedState = nextState;
+            					}
             				}
             			}
             		}
@@ -345,31 +357,36 @@ HXLINE( 214)					::flixel::FlxG_obj::game->_requestedState = nextState;
 
 void FreeplayState_obj::changeDiff(::hx::Null< int >  __o_change){
             		int change = __o_change.Default(0);
-            	HX_STACKFRAME(&_hx_pos_86166a84e8de7ace_219_changeDiff)
-HXLINE( 220)		 ::FreeplayState _hx_tmp = ::hx::ObjectPtr<OBJ_>(this);
-HXDLIN( 220)		_hx_tmp->curDifficulty = (_hx_tmp->curDifficulty + change);
-HXLINE( 222)		if ((this->curDifficulty < 0)) {
-HXLINE( 223)			this->curDifficulty = 3;
+            	HX_STACKFRAME(&_hx_pos_86166a84e8de7ace_221_changeDiff)
+HXLINE( 222)		 ::FreeplayState _hx_tmp = ::hx::ObjectPtr<OBJ_>(this);
+HXDLIN( 222)		_hx_tmp->curDifficulty = (_hx_tmp->curDifficulty + change);
+HXLINE( 223)		if ((this->curDifficulty < 0)) {
+HXLINE( 224)			this->curDifficulty = 3;
             		}
-HXLINE( 224)		if ((this->curDifficulty > 3)) {
-HXLINE( 225)			this->curDifficulty = 0;
+HXLINE( 225)		if ((this->curDifficulty > 3)) {
+HXLINE( 226)			this->curDifficulty = 0;
             		}
-HXLINE( 228)		this->intendedScore = ::Highscore_obj::getScore(this->songs->__get(this->curSelected).StaticCast<  ::SongMetadata >()->songName,this->curDifficulty);
-HXLINE( 231)		switch((int)(this->curDifficulty)){
+HXLINE( 229)		this->intendedScore = ::Highscore_obj::getScore(this->songs->__get(this->curSelected).StaticCast<  ::SongMetadata >()->songName,this->curDifficulty);
+HXLINE( 232)		switch((int)(this->curDifficulty)){
             			case (int)0: {
-HXLINE( 234)				this->diffText->set_text(HX_("EASY",02,54,cd,2d));
+HXLINE( 235)				this->diffText->set_text(HX_("EASY",02,54,cd,2d));
             			}
             			break;
             			case (int)1: {
-HXLINE( 236)				this->diffText->set_text(HX_("NORMAL",27,1e,ec,e2));
+HXLINE( 237)				this->diffText->set_text(HX_("NORMAL",27,1e,ec,e2));
             			}
             			break;
             			case (int)2: {
-HXLINE( 238)				this->diffText->set_text(HX_("HARD",eb,f6,c8,2f));
+HXLINE( 239)				this->diffText->set_text(HX_("HARD",eb,f6,c8,2f));
             			}
             			break;
             			case (int)3: {
-HXLINE( 240)				this->diffText->set_text(HX_("FLUSHED",03,c8,20,ea));
+HXLINE( 241)				if (( (bool)(::flixel::FlxG_obj::save->data->__Field(HX_("flushedUnlocked",66,3f,22,bb),::hx::paccDynamic)) )) {
+HXLINE( 242)					this->diffText->set_text(HX_("FLUSHED",03,c8,20,ea));
+            				}
+            				else {
+HXLINE( 244)					this->diffText->set_text(HX_("LOCKED",0a,b1,49,0c));
+            				}
             			}
             			break;
             		}
@@ -380,42 +397,42 @@ HX_DEFINE_DYNAMIC_FUNC1(FreeplayState_obj,changeDiff,(void))
 
 void FreeplayState_obj::changeSelection(::hx::Null< int >  __o_change){
             		int change = __o_change.Default(0);
-            	HX_STACKFRAME(&_hx_pos_86166a84e8de7ace_245_changeSelection)
-HXLINE( 251)		 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp = ::flixel::FlxG_obj::sound;
-HXDLIN( 251)		_hx_tmp->play(::Paths_obj::sound(HX_("scrollMenu",4c,d4,18,06),null()),((Float)0.4),null(),null(),null(),null());
-HXLINE( 253)		 ::FreeplayState _hx_tmp1 = ::hx::ObjectPtr<OBJ_>(this);
-HXDLIN( 253)		_hx_tmp1->curSelected = (_hx_tmp1->curSelected + change);
-HXLINE( 255)		if ((this->curSelected < 0)) {
-HXLINE( 256)			this->curSelected = (this->songs->length - 1);
+            	HX_STACKFRAME(&_hx_pos_86166a84e8de7ace_249_changeSelection)
+HXLINE( 255)		 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp = ::flixel::FlxG_obj::sound;
+HXDLIN( 255)		_hx_tmp->play(::Paths_obj::sound(HX_("scrollMenu",4c,d4,18,06),null()),((Float)0.4),null(),null(),null(),null());
+HXLINE( 257)		 ::FreeplayState _hx_tmp1 = ::hx::ObjectPtr<OBJ_>(this);
+HXDLIN( 257)		_hx_tmp1->curSelected = (_hx_tmp1->curSelected + change);
+HXLINE( 259)		if ((this->curSelected < 0)) {
+HXLINE( 260)			this->curSelected = (this->songs->length - 1);
             		}
-HXLINE( 257)		if ((this->curSelected >= this->songs->length)) {
-HXLINE( 258)			this->curSelected = 0;
+HXLINE( 261)		if ((this->curSelected >= this->songs->length)) {
+HXLINE( 262)			this->curSelected = 0;
             		}
-HXLINE( 263)		this->intendedScore = ::Highscore_obj::getScore(this->songs->__get(this->curSelected).StaticCast<  ::SongMetadata >()->songName,this->curDifficulty);
-HXLINE( 268)		 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp2 = ::flixel::FlxG_obj::sound;
-HXDLIN( 268)		_hx_tmp2->playMusic((((HX_("songs:assets/songs/",c1,ed,e6,7e) + this->songs->__get(this->curSelected).StaticCast<  ::SongMetadata >()->songName.toLowerCase()) + HX_("/Inst.",f9,6e,13,1c)) + HX_("ogg",4f,94,54,00)),0,null(),null());
-HXLINE( 271)		int bullShit = 0;
-HXLINE( 273)		{
-HXLINE( 273)			int _g = 0;
-HXDLIN( 273)			int _g1 = this->iconArray->length;
-HXDLIN( 273)			while((_g < _g1)){
-HXLINE( 273)				_g = (_g + 1);
-HXDLIN( 273)				int i = (_g - 1);
-HXLINE( 275)				this->iconArray->__get(i).StaticCast<  ::HealthIcon >()->set_alpha(((Float)0.6));
+HXLINE( 267)		this->intendedScore = ::Highscore_obj::getScore(this->songs->__get(this->curSelected).StaticCast<  ::SongMetadata >()->songName,this->curDifficulty);
+HXLINE( 272)		 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp2 = ::flixel::FlxG_obj::sound;
+HXDLIN( 272)		_hx_tmp2->playMusic((((HX_("songs:assets/songs/",c1,ed,e6,7e) + this->songs->__get(this->curSelected).StaticCast<  ::SongMetadata >()->songName.toLowerCase()) + HX_("/Inst.",f9,6e,13,1c)) + HX_("ogg",4f,94,54,00)),0,null(),null());
+HXLINE( 275)		int bullShit = 0;
+HXLINE( 277)		{
+HXLINE( 277)			int _g = 0;
+HXDLIN( 277)			int _g1 = this->iconArray->length;
+HXDLIN( 277)			while((_g < _g1)){
+HXLINE( 277)				_g = (_g + 1);
+HXDLIN( 277)				int i = (_g - 1);
+HXLINE( 279)				this->iconArray->__get(i).StaticCast<  ::HealthIcon >()->set_alpha(((Float)0.6));
             			}
             		}
-HXLINE( 278)		this->iconArray->__get(this->curSelected).StaticCast<  ::HealthIcon >()->set_alpha(( (Float)(1) ));
-HXLINE( 280)		{
-HXLINE( 280)			int _g2 = 0;
-HXDLIN( 280)			::Array< ::Dynamic> _g3 = this->grpSongs->members;
-HXDLIN( 280)			while((_g2 < _g3->length)){
-HXLINE( 280)				 ::Alphabet item = _g3->__get(_g2).StaticCast<  ::Alphabet >();
-HXDLIN( 280)				_g2 = (_g2 + 1);
-HXLINE( 282)				item->targetY = ( (Float)((bullShit - this->curSelected)) );
-HXLINE( 283)				bullShit = (bullShit + 1);
-HXLINE( 285)				item->set_alpha(((Float)0.6));
-HXLINE( 288)				if ((item->targetY == 0)) {
-HXLINE( 290)					item->set_alpha(( (Float)(1) ));
+HXLINE( 282)		this->iconArray->__get(this->curSelected).StaticCast<  ::HealthIcon >()->set_alpha(( (Float)(1) ));
+HXLINE( 284)		{
+HXLINE( 284)			int _g2 = 0;
+HXDLIN( 284)			::Array< ::Dynamic> _g3 = this->grpSongs->members;
+HXDLIN( 284)			while((_g2 < _g3->length)){
+HXLINE( 284)				 ::Alphabet item = _g3->__get(_g2).StaticCast<  ::Alphabet >();
+HXDLIN( 284)				_g2 = (_g2 + 1);
+HXLINE( 286)				item->targetY = ( (Float)((bullShit - this->curSelected)) );
+HXLINE( 287)				bullShit = (bullShit + 1);
+HXLINE( 289)				item->set_alpha(((Float)0.6));
+HXLINE( 292)				if ((item->targetY == 0)) {
+HXLINE( 294)					item->set_alpha(( (Float)(1) ));
             				}
             			}
             		}

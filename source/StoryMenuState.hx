@@ -25,7 +25,7 @@ class StoryMenuState extends MusicBeatState
 
 	var weekData:Array<Dynamic> = [
 		['Tutorial'],
-		['Bitwit','Polygonal','hexadec','subaru']
+		['Bitwit','Polygonal','hexadec']
 	];
 	var curDifficulty:Int = 1;
 
@@ -89,7 +89,7 @@ class StoryMenuState extends MusicBeatState
 		rankText.screenCenter(X);
 
 		var ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
-		var yellowBG:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 400, 0xFFF9CF51);
+		var yellowBG:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 400, 0xFF9966cc);
 
 		grpWeekText = new FlxTypedGroup<MenuItem>();
 		add(grpWeekText);
@@ -152,6 +152,7 @@ class StoryMenuState extends MusicBeatState
 		sprDifficulty.animation.addByPrefix('normal', 'NORMAL');
 		sprDifficulty.animation.addByPrefix('hard', 'HARD');
 		sprDifficulty.animation.addByPrefix('alt','ALT');
+		sprDifficulty.animation.addByPrefix('locked','lock');
 		sprDifficulty.animation.play('easy');
 		changeDifficulty();
 
@@ -258,6 +259,7 @@ class StoryMenuState extends MusicBeatState
 	{
 		if (weekUnlocked[curWeek])
 		{
+			if(FlxG.save.data.flushedUnlocked || !(curDifficulty == 3))
 			if (stopspamming == false)
 			{
 				FlxG.sound.play(Paths.sound('confirmMenu'));
@@ -265,7 +267,7 @@ class StoryMenuState extends MusicBeatState
 				grpWeekText.members[curWeek].startFlashing();
 				grpWeekCharacters.members[1].animation.play('bfConfirm');
 				stopspamming = true;
-			}
+			
 
 			PlayState.storyPlaylist = weekData[curWeek];
 			PlayState.isStoryMode = true;
@@ -295,16 +297,18 @@ class StoryMenuState extends MusicBeatState
 				LoadingState.loadAndSwitchState(new PlayState(), true);
 			});
 		}
+		}
 	}
 
 	function changeDifficulty(change:Int = 0):Void
 	{
 		curDifficulty += change;
 
-		if (curDifficulty < 0)
-			curDifficulty = 3;
-		if (curDifficulty > 3)
-			curDifficulty = 0;
+			if (curDifficulty < 0)
+				curDifficulty = 3;
+			if (curDifficulty > 3)
+				curDifficulty = 0;
+
 
 		sprDifficulty.offset.x = 0;
 
@@ -320,8 +324,16 @@ class StoryMenuState extends MusicBeatState
 				sprDifficulty.animation.play('hard');
 				sprDifficulty.offset.x = 20;
 			case 3:
-				sprDifficulty.animation.play('alt');
-				sprDifficulty.offset.x = 30;
+				if(FlxG.save.data.flushedUnlocked) {
+					sprDifficulty.animation.play('alt');
+					sprDifficulty.offset.x = 85;
+					sprDifficulty.scale.set(0.9, 0.9);
+				} else {
+					sprDifficulty.animation.play('locked');
+					sprDifficulty.scale.set(1.15, 1.15);
+					sprDifficulty.offset.x = -47;
+					sprDifficulty.offset.y = 15;
+				}
 		}
 
 		sprDifficulty.alpha = 0;

@@ -1444,6 +1444,9 @@
 #ifndef INCLUDED___ASSET__assets_fonts_pixel_otf
 #include <__ASSET__assets_fonts_pixel_otf.h>
 #endif
+#ifndef INCLUDED___ASSET__assets_fonts_minor_spelling_mp4
+#include <__ASSET__assets_fonts_minor_spelling_mp4.h>
+#endif
 #ifndef INCLUDED___ASSET__assets_fonts_fridayfunkin_otf
 #include <__ASSET__assets_fonts_fridayfunkin_otf.h>
 #endif
@@ -4389,6 +4392,7 @@ __files__boot();
 ::__ASSET__flixel_sounds_beep_ogg_obj::__register();
 ::__ASSET__assets_fonts_vcr_ttf_obj::__register();
 ::__ASSET__assets_fonts_pixel_otf_obj::__register();
+::__ASSET__assets_fonts_minor_spelling_mp4_obj::__register();
 ::__ASSET__assets_fonts_fridayfunkin_otf_obj::__register();
 ::__ASSET__assets_fonts_fonts_go_here_txt_obj::__register();
 ::__ASSET__assets_fonts_comicsans_ttf_obj::__register();
@@ -5314,6 +5318,7 @@ __files__boot();
 ::__ASSET__assets_fonts_comicsans_ttf_obj::__boot();
 ::__ASSET__assets_fonts_fonts_go_here_txt_obj::__boot();
 ::__ASSET__assets_fonts_fridayfunkin_otf_obj::__boot();
+::__ASSET__assets_fonts_minor_spelling_mp4_obj::__boot();
 ::__ASSET__assets_fonts_pixel_otf_obj::__boot();
 ::__ASSET__assets_fonts_vcr_ttf_obj::__boot();
 ::__ASSET__flixel_sounds_beep_ogg_obj::__boot();

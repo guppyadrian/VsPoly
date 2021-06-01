@@ -15,7 +15,7 @@
 #endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_8bfc11e184ba7c83_307_new,"__ASSET__assets_fonts_fridayfunkin_otf","new",0x882c342b,"__ASSET__assets_fonts_fridayfunkin_otf.new","lime/_internal/macros/AssetsMacro.hx",307,0xc651f030)
-HX_LOCAL_STACK_FRAME(_hx_pos_04523e81b4a8a8b5_391_boot,"__ASSET__assets_fonts_fridayfunkin_otf","boot",0x969a7207,"__ASSET__assets_fonts_fridayfunkin_otf.boot","ManifestResources.hx",391,0xf77aa668)
+HX_LOCAL_STACK_FRAME(_hx_pos_04523e81b4a8a8b5_417_boot,"__ASSET__assets_fonts_fridayfunkin_otf","boot",0x969a7207,"__ASSET__assets_fonts_fridayfunkin_otf.boot","ManifestResources.hx",417,0xf77aa668)
 
 void __ASSET__assets_fonts_fridayfunkin_otf_obj::__construct(){
             	HX_STACKFRAME(&_hx_pos_8bfc11e184ba7c83_307_new)
@@ -136,8 +136,8 @@ void __ASSET__assets_fonts_fridayfunkin_otf_obj::__register()
 void __ASSET__assets_fonts_fridayfunkin_otf_obj::__boot()
 {
 {
-            	HX_STACKFRAME(&_hx_pos_04523e81b4a8a8b5_391_boot)
-HXDLIN( 391)		resourceName = HX_("LIME_font___ASSET__assets_fonts_fridayfunkin_otf",ff,0e,56,24);
+            	HX_STACKFRAME(&_hx_pos_04523e81b4a8a8b5_417_boot)
+HXDLIN( 417)		resourceName = HX_("LIME_font___ASSET__assets_fonts_fridayfunkin_otf",ff,0e,56,24);
             	}
 }
 

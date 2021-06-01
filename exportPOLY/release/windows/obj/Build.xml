@@ -11519,6 +11519,7 @@
    <depend name="include/flixel/tweens/FlxTween.h"/>
    <depend name="include/flixel/tweens/misc/VarTween.h"/>
    <depend name="include/flixel/util/FlxAxes.h"/>
+   <depend name="include/flixel/util/FlxSave.h"/>
    <depend name="include/flixel/util/FlxTimer.h"/>
    <depend name="include/flixel/util/FlxTimerManager.h"/>
    <depend name="include/flixel/util/IFlxDestroyable.h"/>
@@ -12595,6 +12596,11 @@
    <depend name="include/haxe/io/Bytes.h"/>
    <depend name="include/lime/text/Font.h"/>
   </file>
+  <file name="src/__ASSET__assets_fonts_minor_spelling_mp4.cpp" >
+   <depend name="include/__ASSET__assets_fonts_minor_spelling_mp4.h"/>
+   <depend name="include/haxe/Resource.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+  </file>
   <file name="src/__ASSET__assets_fonts_fridayfunkin_otf.cpp" >
    <depend name="include/__ASSET__assets_fonts_fridayfunkin_otf.h"/>
    <depend name="include/haxe/Resource.h"/>
@@ -13097,6 +13103,7 @@
    <depend name="include/flixel/system/frontEnds/SoundFrontEnd.h"/>
    <depend name="include/flixel/text/FlxText.h"/>
    <depend name="include/flixel/text/FlxTextBorderStyle.h"/>
+   <depend name="include/flixel/util/FlxSave.h"/>
    <depend name="include/flixel/util/IFlxDestroyable.h"/>
    <depend name="include/haxe/Log.h"/>
    <depend name="include/openfl/display/DisplayObject.h"/>
@@ -14556,6 +14563,7 @@
    <depend name="include/__ASSET__flixel_sounds_beep_ogg.h"/>
    <depend name="include/__ASSET__assets_fonts_vcr_ttf.h"/>
    <depend name="include/__ASSET__assets_fonts_pixel_otf.h"/>
+   <depend name="include/__ASSET__assets_fonts_minor_spelling_mp4.h"/>
    <depend name="include/__ASSET__assets_fonts_fridayfunkin_otf.h"/>
    <depend name="include/__ASSET__assets_fonts_fonts_go_here_txt.h"/>
    <depend name="include/__ASSET__assets_fonts_comicsans_ttf.h"/>
@@ -14678,6 +14686,7 @@
 <file name="src/resources/__res_72.cpp" tags="optim-none" />
 <file name="src/resources/__res_73.cpp" tags="optim-none" />
 <file name="src/resources/__res_74.cpp" tags="optim-none" />
+<file name="src/resources/__res_75.cpp" tags="optim-none" />
 </files>
 <files id="__externs__">
 </files>

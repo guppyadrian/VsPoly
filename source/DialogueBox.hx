@@ -74,7 +74,7 @@ class DialogueBox extends FlxSpriteGroup
 				box.frames = Paths.getSparrowAtlas('weeb/pixelUI/dialogueBox-pixel');
 				box.animation.addByPrefix('normalOpen', 'Text Box Appear', 24, false);
 				box.animation.addByIndices('normal', 'Text Box Appear', [4], "", 24);
-			case 'bitwit' | 'polygonal' | 'hexadec' | 'subaru':
+			case 'bitwit' | 'polygonal' | 'hexadec':
 				box = new FlxSprite(-20, 400);
 				hasDialog = true;
 				box.frames = Paths.getSparrowAtlas('poly_bubble_talking');
@@ -120,7 +120,7 @@ class DialogueBox extends FlxSpriteGroup
 				portraitLeft.scrollFactor.set();
 				add(portraitLeft);
 				portraitLeft.visible = false;
-			case 'bitwit' | 'polygonal' | 'hexadec' | 'subaru':
+			case 'bitwit' | 'polygonal' | 'hexadec':
 				portraitLeft = new FlxSprite(50, 0);
 				portraitLeft.frames = Paths.getSparrowAtlas('poly/polyDialogue');
 				portraitLeft.animation.addByPrefix('enter', 'Senpai Portrait Enter', 24, false);
@@ -187,12 +187,12 @@ class DialogueBox extends FlxSpriteGroup
 
 		dropText = new FlxText(242, 502, Std.int(FlxG.width * 0.6), "", 64);
 		dropText.font = 'Friday Funkin Regular';
-		dropText.color = 0x666666;
+		dropText.color = 0x1c0637;
 		add(dropText);
 
 		swagDialogue = new FlxTypeText(240, 500, Std.int(FlxG.width * 0.6), "", 64);
 		swagDialogue.font = 'Friday Funkin Regular';
-		swagDialogue.color = 0x000000;
+		swagDialogue.color = 0x460f8a;
 		swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.6)];
 		add(swagDialogue);
 

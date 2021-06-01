@@ -194,7 +194,21 @@ HXLINE(  27)		this->offsetChanged = false;
 HXLINE(  22)		this->curSelected = 0;
 HXLINE(  21)		this->menuItems = ::Array_obj< ::String >::fromData( _hx_array_data_08e59567_2,3);
 HXLINE(  31)		super::__construct();
-HXLINE(  32)		if ((::PlayState_obj::curStage == HX_("polyStage",d2,08,f3,19))) {
+HXLINE(  32)		bool _hx_tmp;
+HXDLIN(  32)		bool _hx_tmp1;
+HXDLIN(  32)		if ((::PlayState_obj::curStage != HX_("polyNight",ec,57,b1,31))) {
+HXLINE(  32)			_hx_tmp1 = (::PlayState_obj::curStage == HX_("polyMorning",18,8f,8e,98));
+            		}
+            		else {
+HXLINE(  32)			_hx_tmp1 = true;
+            		}
+HXDLIN(  32)		if (!(_hx_tmp1)) {
+HXLINE(  32)			_hx_tmp = (::PlayState_obj::curStage == HX_("polyDay",70,67,76,12));
+            		}
+            		else {
+HXLINE(  32)			_hx_tmp = true;
+            		}
+HXDLIN(  32)		if (_hx_tmp) {
 HXLINE(  33)			 ::flixel::_hx_system::FlxSound _hx_tmp =  ::flixel::_hx_system::FlxSound_obj::__alloc( HX_CTX );
 HXDLIN(  33)			::String library = null();
 HXDLIN(  33)			this->pauseMusic = _hx_tmp->loadEmbedded(::Paths_obj::getPath((((HX_("music/",ea,bf,1b,3f) + HX_("lofly",d0,19,f3,78)) + HX_(".",2e,00,00,00)) + HX_("ogg",4f,94,54,00)),HX_("MUSIC",85,08,49,8e),library),true,true,null());
@@ -205,9 +219,9 @@ HXDLIN(  35)			::String library = null();
 HXDLIN(  35)			this->pauseMusic = _hx_tmp->loadEmbedded(::Paths_obj::getPath((((HX_("music/",ea,bf,1b,3f) + HX_("breakfast",db,b2,0c,49)) + HX_(".",2e,00,00,00)) + HX_("ogg",4f,94,54,00)),HX_("MUSIC",85,08,49,8e),library),true,true,null());
             		}
 HXLINE(  37)		this->pauseMusic->set_volume(( (Float)(0) ));
-HXLINE(  38)		 ::flixel::_hx_system::FlxSound _hx_tmp = this->pauseMusic;
-HXDLIN(  38)		 ::flixel::math::FlxRandom _hx_tmp1 = ::flixel::FlxG_obj::random;
-HXDLIN(  38)		_hx_tmp->play(false,_hx_tmp1->_hx_int(0,::Std_obj::_hx_int((this->pauseMusic->_length / ( (Float)(2) ))),null()),null());
+HXLINE(  38)		 ::flixel::_hx_system::FlxSound _hx_tmp2 = this->pauseMusic;
+HXDLIN(  38)		 ::flixel::math::FlxRandom _hx_tmp3 = ::flixel::FlxG_obj::random;
+HXDLIN(  38)		_hx_tmp2->play(false,_hx_tmp3->_hx_int(0,::Std_obj::_hx_int((this->pauseMusic->_length / ( (Float)(2) ))),null()),null());
 HXLINE(  40)		::flixel::FlxG_obj::sound->list->add(this->pauseMusic).StaticCast<  ::flixel::_hx_system::FlxSound >();
 HXLINE(  42)		 ::flixel::FlxSprite bg =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,null(),null(),null())->makeGraphic(::flixel::FlxG_obj::width,::flixel::FlxG_obj::height,-16777216,null(),null());
 HXLINE(  43)		bg->set_alpha(( (Float)(0) ));
@@ -228,10 +242,10 @@ HXLINE(  58)		levelDifficulty->updateHitbox();
 HXLINE(  59)		this->add(levelDifficulty);
 HXLINE(  61)		levelDifficulty->set_alpha(( (Float)(0) ));
 HXLINE(  62)		levelInfo->set_alpha(( (Float)(0) ));
-HXLINE(  64)		int _hx_tmp2 = ::flixel::FlxG_obj::width;
-HXDLIN(  64)		levelInfo->set_x((( (Float)(_hx_tmp2) ) - (levelInfo->get_width() + 20)));
-HXLINE(  65)		int _hx_tmp3 = ::flixel::FlxG_obj::width;
-HXDLIN(  65)		levelDifficulty->set_x((( (Float)(_hx_tmp3) ) - (levelDifficulty->get_width() + 20)));
+HXLINE(  64)		int _hx_tmp4 = ::flixel::FlxG_obj::width;
+HXDLIN(  64)		levelInfo->set_x((( (Float)(_hx_tmp4) ) - (levelInfo->get_width() + 20)));
+HXLINE(  65)		int _hx_tmp5 = ::flixel::FlxG_obj::width;
+HXDLIN(  65)		levelDifficulty->set_x((( (Float)(_hx_tmp5) ) - (levelDifficulty->get_width() + 20)));
 HXLINE(  67)		::flixel::tweens::FlxTween_obj::tween(bg, ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("alpha",5e,a7,96,21),((Float)0.6))),((Float)0.4), ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::quartInOut_dyn())));
@@ -300,7 +314,21 @@ bool PauseSubState_obj::_hx_isInstanceOf(int inClassId) {
 
 void PauseSubState_obj::update(Float elapsed){
             	HX_GC_STACKFRAME(&_hx_pos_17d383cbce329512_95_update)
-HXLINE(  96)		if ((::PlayState_obj::curStage == HX_("polyStage",d2,08,f3,19))) {
+HXLINE(  96)		bool _hx_tmp;
+HXDLIN(  96)		bool _hx_tmp1;
+HXDLIN(  96)		if ((::PlayState_obj::curStage != HX_("polyNight",ec,57,b1,31))) {
+HXLINE(  96)			_hx_tmp1 = (::PlayState_obj::curStage == HX_("polyMorning",18,8f,8e,98));
+            		}
+            		else {
+HXLINE(  96)			_hx_tmp1 = true;
+            		}
+HXDLIN(  96)		if (!(_hx_tmp1)) {
+HXLINE(  96)			_hx_tmp = (::PlayState_obj::curStage == HX_("polyDay",70,67,76,12));
+            		}
+            		else {
+HXLINE(  96)			_hx_tmp = true;
+            		}
+HXDLIN(  96)		if (_hx_tmp) {
 HXLINE(  97)			if ((this->pauseMusic->_volume < ((Float)0.80))) {
 HXLINE(  98)				 ::flixel::_hx_system::FlxSound fh = this->pauseMusic;
 HXDLIN(  98)				fh->set_volume((fh->_volume + (((Float)0.02) * elapsed)));
@@ -424,7 +452,7 @@ HXDLIN( 185)				goto _hx_goto_5;
             			_hx_goto_5:;
             		}
 HXLINE( 205)		 ::flixel::input::keyboard::FlxKeyList _this = ( ( ::flixel::input::keyboard::FlxKeyList)(::flixel::FlxG_obj::keys->justPressed) );
-HXDLIN( 205)		bool _hx_tmp = _this->keyManager->checkStatus(74,_this->status);
+HXDLIN( 205)		bool _hx_tmp2 = _this->keyManager->checkStatus(74,_this->status);
             	}
 
 

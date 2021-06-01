@@ -77,6 +77,7 @@ extern unsigned char __res_71[];
 extern unsigned char __res_72[];
 extern unsigned char __res_73[];
 extern unsigned char __res_74[];
+extern unsigned char __res_75[];
 }
 
 ::hx::Resource __Resources[] = {
@@ -136,25 +137,26 @@ extern unsigned char __res_74[];
 	{ HX_("__ASSET__:bitmap_flixel_system_debug_interaction_tools_GraphicCursorCross",12,f7,e2,fa),214,::hx::__res_53 + 4 },
 	{ HX_("__ASSET__:bitmap_flixel_system_debug_GraphicWatch",66,8f,5d,86),342,::hx::__res_54 + 4 },
 	{ HX_("__ASSET__:image___ASSET__flixel_flixel_ui_img_button_thin_png",6b,32,6e,23),247,::hx::__res_55 + 4 },
-	{ HX_("__ASSET__:bitmap_flixel_system_debug_interaction_tools__Transform_GraphicTransformCursorScaleXY",6f,8f,8d,55),213,::hx::__res_56 + 4 },
-	{ HX_("__ASSET__:file___ASSET__flixel_sounds_flixel_ogg",9b,a0,bd,8d),33629,::hx::__res_57 + 4 },
-	{ HX_("__ASSET__:bitmap_flixel_system_debug_interaction_tools__Eraser_GraphicEraserTool",08,fb,52,67),48233,::hx::__res_58 + 4 },
-	{ HX_("__ASSET__:bitmap_flixel_system__FlxPreloader_GraphicLogoLight",b2,b0,e9,d2),1804,::hx::__res_59 + 4 },
-	{ HX_("__ASSET__:bitmap_flixel_system_debug_stats__Stats_GraphicMinimizeButton",38,20,46,56),178,::hx::__res_60 + 4 },
-	{ HX_("__ASSET__:bitmap_flixel_addons_transition_GraphicTransTileSquare",06,2a,6a,6d),15583,::hx::__res_61 + 4 },
-	{ HX_("__ASSET__:image___ASSET__flixel_flixel_ui_img_finger_big_png",39,e2,df,0d),1724,::hx::__res_62 + 4 },
-	{ HX_("__ASSET__:image___ASSET__flixel_flixel_ui_img_hilight_png",9a,7b,e5,4d),129,::hx::__res_63 + 4 },
-	{ HX_("LIME_font___ASSET__assets_fonts_vcr_ttf",9f,aa,95,e0),75864,::hx::__res_64 + 4 },
-	{ HX_("__ASSET__:image___ASSET__flixel_flixel_ui_img_radio_dot_png",2a,28,60,f8),153,::hx::__res_65 + 4 },
-	{ HX_("__ASSET__:bitmap_flixel_system_debug_GraphicStats",36,ef,43,45),171,::hx::__res_66 + 4 },
-	{ HX_("__ASSET__:image___ASSET__flixel_flixel_ui_img_chrome_png",49,b7,86,49),253,::hx::__res_67 + 4 },
-	{ HX_("__ASSET__:bitmap_flixel_addons_transition_GraphicTransTileDiamond",cb,79,c6,30),1657,::hx::__res_68 + 4 },
-	{ HX_("__ASSET__:image___ASSET__flixel_flixel_ui_img_dropdown_mark_png",e0,ec,16,1f),156,::hx::__res_69 + 4 },
-	{ HX_("LIME_font___ASSET__assets_fonts_comicsans_ttf",e8,ae,9a,5f),245600,::hx::__res_70 + 4 },
-	{ HX_("__ASSET__:image___ASSET__flixel_flixel_ui_img_button_png",c1,bb,20,7d),433,::hx::__res_71 + 4 },
-	{ HX_("__ASSET__:image___ASSET__flixel_flixel_ui_img_check_box_png",79,29,1e,5c),922,::hx::__res_72 + 4 },
-	{ HX_("__ASSET__:image___ASSET__flixel_flixel_ui_img_plus_mark_png",f7,d6,28,cb),147,::hx::__res_73 + 4 },
-	{ HX_("__ASSET__:bitmap_flixel_system_debug_stats__Stats_GraphicMaximizeButton",66,7c,bc,b9),194,::hx::__res_74 + 4 },
+	{ HX_("__ASSET__:file___ASSET__assets_fonts_minor_spelling_mp4",76,30,43,e6),225226,::hx::__res_56 + 4 },
+	{ HX_("__ASSET__:bitmap_flixel_system_debug_interaction_tools__Transform_GraphicTransformCursorScaleXY",6f,8f,8d,55),213,::hx::__res_57 + 4 },
+	{ HX_("__ASSET__:file___ASSET__flixel_sounds_flixel_ogg",9b,a0,bd,8d),33629,::hx::__res_58 + 4 },
+	{ HX_("__ASSET__:bitmap_flixel_system_debug_interaction_tools__Eraser_GraphicEraserTool",08,fb,52,67),48233,::hx::__res_59 + 4 },
+	{ HX_("__ASSET__:bitmap_flixel_system__FlxPreloader_GraphicLogoLight",b2,b0,e9,d2),1804,::hx::__res_60 + 4 },
+	{ HX_("__ASSET__:bitmap_flixel_system_debug_stats__Stats_GraphicMinimizeButton",38,20,46,56),178,::hx::__res_61 + 4 },
+	{ HX_("__ASSET__:bitmap_flixel_addons_transition_GraphicTransTileSquare",06,2a,6a,6d),15583,::hx::__res_62 + 4 },
+	{ HX_("__ASSET__:image___ASSET__flixel_flixel_ui_img_finger_big_png",39,e2,df,0d),1724,::hx::__res_63 + 4 },
+	{ HX_("__ASSET__:image___ASSET__flixel_flixel_ui_img_hilight_png",9a,7b,e5,4d),129,::hx::__res_64 + 4 },
+	{ HX_("LIME_font___ASSET__assets_fonts_vcr_ttf",9f,aa,95,e0),75864,::hx::__res_65 + 4 },
+	{ HX_("__ASSET__:image___ASSET__flixel_flixel_ui_img_radio_dot_png",2a,28,60,f8),153,::hx::__res_66 + 4 },
+	{ HX_("__ASSET__:bitmap_flixel_system_debug_GraphicStats",36,ef,43,45),171,::hx::__res_67 + 4 },
+	{ HX_("__ASSET__:image___ASSET__flixel_flixel_ui_img_chrome_png",49,b7,86,49),253,::hx::__res_68 + 4 },
+	{ HX_("__ASSET__:bitmap_flixel_addons_transition_GraphicTransTileDiamond",cb,79,c6,30),1657,::hx::__res_69 + 4 },
+	{ HX_("__ASSET__:image___ASSET__flixel_flixel_ui_img_dropdown_mark_png",e0,ec,16,1f),156,::hx::__res_70 + 4 },
+	{ HX_("LIME_font___ASSET__assets_fonts_comicsans_ttf",e8,ae,9a,5f),245600,::hx::__res_71 + 4 },
+	{ HX_("__ASSET__:image___ASSET__flixel_flixel_ui_img_button_png",c1,bb,20,7d),433,::hx::__res_72 + 4 },
+	{ HX_("__ASSET__:image___ASSET__flixel_flixel_ui_img_check_box_png",79,29,1e,5c),922,::hx::__res_73 + 4 },
+	{ HX_("__ASSET__:image___ASSET__flixel_flixel_ui_img_plus_mark_png",f7,d6,28,cb),147,::hx::__res_74 + 4 },
+	{ HX_("__ASSET__:bitmap_flixel_system_debug_stats__Stats_GraphicMaximizeButton",66,7c,bc,b9),194,::hx::__res_75 + 4 },
 	{ ::String(null()),0,0 }
 };
 

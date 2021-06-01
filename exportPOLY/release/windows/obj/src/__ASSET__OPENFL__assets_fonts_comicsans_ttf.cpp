@@ -14,12 +14,12 @@
 #include <openfl/text/Font.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_c81188fae57404ec_456_new,"__ASSET__OPENFL__assets_fonts_comicsans_ttf","new",0x516a5d90,"__ASSET__OPENFL__assets_fonts_comicsans_ttf.new","ManifestResources.hx",456,0xf77aa668)
+HX_DEFINE_STACK_FRAME(_hx_pos_c81188fae57404ec_483_new,"__ASSET__OPENFL__assets_fonts_comicsans_ttf","new",0x516a5d90,"__ASSET__OPENFL__assets_fonts_comicsans_ttf.new","ManifestResources.hx",483,0xf77aa668)
 
 void __ASSET__OPENFL__assets_fonts_comicsans_ttf_obj::__construct(){
-            	HX_GC_STACKFRAME(&_hx_pos_c81188fae57404ec_456_new)
-HXDLIN( 456)		this->_hx___fromLimeFont( ::__ASSET__assets_fonts_comicsans_ttf_obj::__alloc( HX_CTX ));
-HXDLIN( 456)		super::__construct(null());
+            	HX_GC_STACKFRAME(&_hx_pos_c81188fae57404ec_483_new)
+HXDLIN( 483)		this->_hx___fromLimeFont( ::__ASSET__assets_fonts_comicsans_ttf_obj::__alloc( HX_CTX ));
+HXDLIN( 483)		super::__construct(null());
             	}
 
 Dynamic __ASSET__OPENFL__assets_fonts_comicsans_ttf_obj::__CreateEmpty() { return new __ASSET__OPENFL__assets_fonts_comicsans_ttf_obj; }

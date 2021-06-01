@@ -1850,6 +1850,7 @@ const char *__hxcpp_all_classes[] = {
 "haxe.io.Bytes",
 "__ASSET__assets_fonts_fonts_go_here_txt",
 "__ASSET__assets_fonts_fridayfunkin_otf",
+"__ASSET__assets_fonts_minor_spelling_mp4",
 "__ASSET__assets_fonts_pixel_otf",
 "__ASSET__assets_fonts_vcr_ttf",
 "__ASSET__flixel_sounds_beep_ogg",

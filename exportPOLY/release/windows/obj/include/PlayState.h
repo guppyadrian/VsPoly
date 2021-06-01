@@ -159,6 +159,7 @@ class HXCPP_CLASS_ATTRIBUTES PlayState_obj : public  ::MusicBeatState_obj
 		 ::flixel::FlxSprite phillyTrain;
 		 ::flixel::_hx_system::FlxSound trainSound;
 		 ::flixel::FlxSprite limo;
+		 ::flixel::FlxSprite bgLight;
 		 ::flixel::group::FlxTypedGroup grpLimoDancers;
 		 ::flixel::FlxSprite fastCar;
 		 ::flixel::text::FlxText songName;

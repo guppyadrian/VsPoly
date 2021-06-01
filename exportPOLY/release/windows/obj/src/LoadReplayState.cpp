@@ -158,7 +158,7 @@
 HX_DEFINE_STACK_FRAME(_hx_pos_67c80871309dda48_19_new,"LoadReplayState","new",0x1e338fb6,"LoadReplayState.new","LoadReplayState.hx",19,0xb45e587a)
 HX_LOCAL_STACK_FRAME(_hx_pos_67c80871309dda48_33_create,"LoadReplayState","create",0x8c296166,"LoadReplayState.create","LoadReplayState.hx",33,0xb45e587a)
 static const ::String _hx_array_data_8a203cc4_4[] = {
-	HX_("Bitwit",95,21,a8,25),HX_("Polygonal",c5,49,85,3c),HX_("Hexadec",3c,60,94,6c),HX_("Subaru",04,b9,91,ce),
+	HX_("Bitwit",95,21,a8,25),HX_("Polygonal",c5,49,85,3c),HX_("Hexadec",3c,60,94,6c),
 };
 static const ::String _hx_array_data_8a203cc4_5[] = {
 	HX_("poly",4c,7e,5c,4a),
@@ -221,7 +221,7 @@ HXDLIN(  34)		 ::flixel::FlxSprite menuBG1 = menuBG->loadGraphic(::Paths_obj::ge
 HXLINE(  36)		this->controlsStrings = ::sys::FileSystem_obj::readDirectory((::Sys_obj::getCwd() + HX_("/assets/replays/",40,86,c0,57)));
 HXLINE(  38)		::haxe::Log_obj::trace(this->controlsStrings,::hx::SourceInfo(HX_("source/LoadReplayState.hx",6e,34,7a,fb),38,HX_("LoadReplayState",c4,3c,20,8a),HX_("create",fc,66,0f,7c)));
 HXLINE(  40)		this->controlsStrings->sort(::Reflect_obj::compare_dyn());
-HXLINE(  51)		this->addWeek(::Array_obj< ::String >::fromData( _hx_array_data_8a203cc4_4,4),1,::Array_obj< ::String >::fromData( _hx_array_data_8a203cc4_5,1));
+HXLINE(  51)		this->addWeek(::Array_obj< ::String >::fromData( _hx_array_data_8a203cc4_4,3),1,::Array_obj< ::String >::fromData( _hx_array_data_8a203cc4_5,1));
 HXLINE(  53)		{
 HXLINE(  53)			int _g = 0;
 HXDLIN(  53)			int _g1 = this->controlsStrings->length;

@@ -14,12 +14,12 @@
 #include <openfl/text/Font.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_24af993993646e52_457_new,"__ASSET__OPENFL__assets_fonts_fridayfunkin_otf","new",0x290e977b,"__ASSET__OPENFL__assets_fonts_fridayfunkin_otf.new","ManifestResources.hx",457,0xf77aa668)
+HX_DEFINE_STACK_FRAME(_hx_pos_24af993993646e52_484_new,"__ASSET__OPENFL__assets_fonts_fridayfunkin_otf","new",0x290e977b,"__ASSET__OPENFL__assets_fonts_fridayfunkin_otf.new","ManifestResources.hx",484,0xf77aa668)
 
 void __ASSET__OPENFL__assets_fonts_fridayfunkin_otf_obj::__construct(){
-            	HX_GC_STACKFRAME(&_hx_pos_24af993993646e52_457_new)
-HXDLIN( 457)		this->_hx___fromLimeFont( ::__ASSET__assets_fonts_fridayfunkin_otf_obj::__alloc( HX_CTX ));
-HXDLIN( 457)		super::__construct(null());
+            	HX_GC_STACKFRAME(&_hx_pos_24af993993646e52_484_new)
+HXDLIN( 484)		this->_hx___fromLimeFont( ::__ASSET__assets_fonts_fridayfunkin_otf_obj::__alloc( HX_CTX ));
+HXDLIN( 484)		super::__construct(null());
             	}
 
 Dynamic __ASSET__OPENFL__assets_fonts_fridayfunkin_otf_obj::__CreateEmpty() { return new __ASSET__OPENFL__assets_fonts_fridayfunkin_otf_obj; }

@@ -128,9 +128,10 @@ HXLINE(  58)			::flixel::FlxG_obj::save->data->__SetField(HX_("accuracyMod",09,b
 HXLINE(  60)		if (::hx::IsNull( ::flixel::FlxG_obj::save->data->__Field(HX_("watermark",a4,af,1e,e0),::hx::paccDynamic) )) {
 HXLINE(  61)			::flixel::FlxG_obj::save->data->__SetField(HX_("watermark",a4,af,1e,e0),true,::hx::paccDynamic);
             		}
-HXLINE(  63)		::Conductor_obj::recalculateTimings();
-HXLINE(  65)		::Main_obj::watermarks = ( (bool)(::flixel::FlxG_obj::save->data->__Field(HX_("watermark",a4,af,1e,e0),::hx::paccDynamic)) );
-HXLINE(  67)		::hx::TCast<  ::Main >::cast(::openfl::Lib_obj::get_current()->getChildAt(0))->setFPSCap(( (Float)(::flixel::FlxG_obj::save->data->__Field(HX_("fpsCap",a9,7b,7e,91),::hx::paccDynamic)) ));
+HXLINE(  62)		bool _hx_tmp1 = ::hx::IsNull( ::flixel::FlxG_obj::save->data->__Field(HX_("flushedUnlocked",66,3f,22,bb),::hx::paccDynamic) );
+HXLINE(  65)		::Conductor_obj::recalculateTimings();
+HXLINE(  67)		::Main_obj::watermarks = ( (bool)(::flixel::FlxG_obj::save->data->__Field(HX_("watermark",a4,af,1e,e0),::hx::paccDynamic)) );
+HXLINE(  69)		::hx::TCast<  ::Main >::cast(::openfl::Lib_obj::get_current()->getChildAt(0))->setFPSCap(( (Float)(::flixel::FlxG_obj::save->data->__Field(HX_("fpsCap",a9,7b,7e,91),::hx::paccDynamic)) ));
             	}
 
 

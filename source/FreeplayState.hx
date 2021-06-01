@@ -202,6 +202,7 @@ class FreeplayState extends MusicBeatState
 
 		if (accepted)
 		{
+			if(FlxG.save.data.flushedUnlocked || !(curDifficulty == 3)) {
 			var poop:String = Highscore.formatSong(songs[curSelected].songName.toLowerCase(), curDifficulty);
 
 			trace(poop);
@@ -212,13 +213,13 @@ class FreeplayState extends MusicBeatState
 			PlayState.storyWeek = songs[curSelected].week;
 			trace('CUR WEEK' + PlayState.storyWeek);
 			LoadingState.loadAndSwitchState(new PlayState());
+			}
 		}
 	}
 
 	function changeDiff(change:Int = 0)
 	{
 		curDifficulty += change;
-
 		if (curDifficulty < 0)
 			curDifficulty = 3;
 		if (curDifficulty > 3)
@@ -237,7 +238,10 @@ class FreeplayState extends MusicBeatState
 			case 2:
 				diffText.text = "HARD";
 			case 3:
+				if(FlxG.save.data.flushedUnlocked)
 				diffText.text = "FLUSHED";
+				else
+				diffText.text = "LOCKED";
 		}
 	}
 

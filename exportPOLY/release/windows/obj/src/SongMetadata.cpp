@@ -5,16 +5,16 @@
 #include <SongMetadata.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_66f21fcacf595f6d_297_new,"SongMetadata","new",0x0585a376,"SongMetadata.new","FreeplayState.hx",297,0x0d86f62d)
+HX_DEFINE_STACK_FRAME(_hx_pos_66f21fcacf595f6d_301_new,"SongMetadata","new",0x0585a376,"SongMetadata.new","FreeplayState.hx",301,0x0d86f62d)
 
 void SongMetadata_obj::__construct(::String song,int week,::String songCharacter){
-            	HX_STACKFRAME(&_hx_pos_66f21fcacf595f6d_297_new)
-HXLINE( 301)		this->songCharacter = HX_("",00,00,00,00);
-HXLINE( 300)		this->week = 0;
-HXLINE( 299)		this->songName = HX_("",00,00,00,00);
-HXLINE( 305)		this->songName = song;
-HXLINE( 306)		this->week = week;
-HXLINE( 307)		this->songCharacter = songCharacter;
+            	HX_STACKFRAME(&_hx_pos_66f21fcacf595f6d_301_new)
+HXLINE( 305)		this->songCharacter = HX_("",00,00,00,00);
+HXLINE( 304)		this->week = 0;
+HXLINE( 303)		this->songName = HX_("",00,00,00,00);
+HXLINE( 309)		this->songName = song;
+HXLINE( 310)		this->week = week;
+HXLINE( 311)		this->songCharacter = songCharacter;
             	}
 
 Dynamic SongMetadata_obj::__CreateEmpty() { return new SongMetadata_obj; }
