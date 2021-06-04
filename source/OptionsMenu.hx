@@ -46,8 +46,8 @@ class OptionsMenu extends MusicBeatState
 			new FPSOption("Toggle the FPS Counter"),
 			new ReplayOption("View replays"),
 			#end
-			new WatermarkOption("Turn off all watermarks from the engine.")
-			
+			new WatermarkOption("Turn off all watermarks from the engine."),
+			new LockFlushedOption("Locks flushed so you need to beat it in hard again")		
 		])
 		
 	];

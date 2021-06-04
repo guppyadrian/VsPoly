@@ -460,6 +460,26 @@ class WatermarkOption extends Option
 	}
 }
 
+class LockFlushedOption extends Option
+{
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+	}
+
+	public override function press():Bool
+	{
+		FlxG.save.data.flushedUnlocked = false;
+		return true;
+	}
+
+	private override function updateDisplay():String
+	{
+		return "Flushed " + (FlxG.save.data.flushedUnlocked ? "unlocked" : "locked");
+	}
+}
+
 class OffsetMenu extends Option
 {
 	public function new(desc:String)

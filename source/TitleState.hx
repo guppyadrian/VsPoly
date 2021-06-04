@@ -163,7 +163,7 @@ class TitleState extends MusicBeatState
 		// bg.updateHitbox();
 		add(bg);
 
-		logoBl = new FlxSprite(-150, -100);
+		logoBl = new FlxSprite(350, -100);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
 		logoBl.antialiasing = true;
 		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24);
@@ -172,10 +172,19 @@ class TitleState extends MusicBeatState
 		// logoBl.screenCenter();
 		// logoBl.color = FlxColor.BLACK;
 
+		/*
 		gfDance = new FlxSprite(FlxG.width * 0.4, FlxG.height * 0.07);
 		gfDance.frames = Paths.getSparrowAtlas('gfDanceTitle');
 		gfDance.animation.addByIndices('danceLeft', 'gfDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
 		gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+		gfDance.antialiasing = true;
+		add(gfDance);
+		add(logoBl);
+		*/
+		gfDance = new FlxSprite(-500, -575);
+		gfDance.frames = Paths.getSparrowAtlas('polymenu/poly_assets');
+		gfDance.animation.addByPrefix('dance', 'Dad idle dance', 24);
+		gfDance.scale.set(1.2, 1.2);
 		gfDance.antialiasing = true;
 		add(gfDance);
 		add(logoBl);
@@ -379,11 +388,13 @@ class TitleState extends MusicBeatState
 
 		logoBl.animation.play('bump');
 		danceLeft = !danceLeft;
-
+		/*
 		if (danceLeft)
 			gfDance.animation.play('danceRight');
 		else
 			gfDance.animation.play('danceLeft');
+		*/
+		gfDance.animation.play('dance');
 
 		FlxG.log.add(curBeat);
 
